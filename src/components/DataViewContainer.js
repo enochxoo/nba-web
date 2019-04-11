@@ -39,7 +39,10 @@ export class DataViewContainer extends React.Component {
                         <Row className="filter-row">
                             <Col span={2} offset={3} className="filter-label">Shots:</Col>
                             <Col span={16}>
-                                <CountSlider onMinCountChange={_.debounce(this.onMinCountChange, 500)} className="filter-control" />
+                                <CountSlider
+                                    value = {this.state.minCount}
+                                    onMinCountChange={_.debounce(this.onMinCountChange, 500)} className="filter-control"
+                                />
                             </Col>
                         </Row>
                     ) : null}
